@@ -8,10 +8,11 @@
 
 import Foundation
 import MedKit
+import RxSwift
 
 class NearbyTableDataSource: TableDataSource<PlaceType, UITableView> {
     
-    let reuseIdentifier = "PlaceTypeCell"
+    private let reuseIdentifier = "PlaceTypeCell"
     
     required init(_ elements: [[Element]], listView: ListView) {
         super.init(elements, listView: listView)

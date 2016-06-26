@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LXd-dC-3mn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LXd-dC-3mn">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Nearby-->
@@ -25,14 +24,11 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="fo0-oI-wwP" kind="show" identifier="ShowPlaceType" id="GbF-G8-yQf"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -41,74 +37,12 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Nearby" image="Near Me" id="pDr-pi-y2X"/>
-                    <navigationItem key="navigationItem" id="Yfp-aC-7aF"/>
+                    <navigationItem key="navigationItem" title="Nearby" id="Yfp-aC-7aF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="man-aj-3Y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1120" y="-79"/>
-        </scene>
-        <!--Places View Controller-->
-        <scene sceneID="UXC-Ml-jC9">
-            <objects>
-                <tableViewController id="fo0-oI-wwP" customClass="PlacesViewController" customModule="NearBy" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="102" sectionHeaderHeight="28" sectionFooterHeight="28" id="RT5-K8-iNt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceCell" rowHeight="100" id="FLL-oJ-b6T" customClass="PlaceCell" customModule="NearBy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FLL-oJ-b6T" id="LnU-CP-04N">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="White House" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88J-N5-ZaM">
-                                            <rect key="frame" x="8" y="8" width="97" height="20"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="African Restaurant - Yaba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My6-aj-RLH">
-                                            <rect key="frame" x="8" y="36" width="186" height="20"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgU-tk-qqT">
-                                            <rect key="frame" x="289" y="8" width="23" height="19.5"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.3411764706" green="0.85490196080000003" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstItem="CgU-tk-qqT" firstAttribute="trailing" secondItem="LnU-CP-04N" secondAttribute="trailingMargin" id="9uA-cb-gzd"/>
-                                        <constraint firstItem="CgU-tk-qqT" firstAttribute="top" secondItem="88J-N5-ZaM" secondAttribute="top" id="D52-Ai-hh6"/>
-                                        <constraint firstItem="My6-aj-RLH" firstAttribute="leading" secondItem="88J-N5-ZaM" secondAttribute="leading" id="Nrb-mz-kge"/>
-                                        <constraint firstItem="My6-aj-RLH" firstAttribute="top" secondItem="88J-N5-ZaM" secondAttribute="bottom" constant="8" symbolic="YES" id="Oxm-nj-1I9"/>
-                                        <constraint firstItem="88J-N5-ZaM" firstAttribute="top" secondItem="LnU-CP-04N" secondAttribute="topMargin" id="Udh-LV-qja"/>
-                                        <constraint firstItem="88J-N5-ZaM" firstAttribute="leading" secondItem="LnU-CP-04N" secondAttribute="leadingMargin" id="xzR-OI-Lfa"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="addressLabel" destination="My6-aj-RLH" id="l3u-hU-7DR"/>
-                                    <outlet property="nameLabel" destination="88J-N5-ZaM" id="rms-aE-Ueb"/>
-                                    <outlet property="ratingLabel" destination="CgU-tk-qqT" id="9jh-a9-eTN"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="fo0-oI-wwP" id="vrh-lY-RRR"/>
-                            <outlet property="delegate" destination="fo0-oI-wwP" id="sKh-Z8-sLF"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B1Y-db-Ewg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1586" y="-79"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SSB-1d-hzx">

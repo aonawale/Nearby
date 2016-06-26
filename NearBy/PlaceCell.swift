@@ -14,15 +14,13 @@ class PlaceCell: UITableViewCell {
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureWithPlace(place: Place) {
+        nameLabel.text = place.name
+        addressLabel.text = place.address
+        ratingLabel.text = "\(place.rating)"
+        let imageView = UIImageView(image: place.photos.first?.image)
+        imageView.contentMode = .ScaleAspectFit
+        backgroundView = imageView
     }
 
 }

@@ -26,16 +26,20 @@ class NearbyViewController: UITableViewController, SegueIdentifiable {
         super.viewDidLoad()
         viewModel = NearbyViewModel()
         dataSource = NearbyTableDataSource(PlaceType.all(), listView: tableView)
+        setupRx()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        guard let segueIdentifier = segueIdentifierForSegue(segue) else { return }
-        switch segueIdentifier {
-        case .ShowPlaceType:
-            let placeType = PlaceType.all()[tableView.indexPathForSelectedRow!.row]
-            let pvc = segue.destinationViewController.contentViewController as! PlacesViewController
-            pvc.viewModel = PlacesViewModel(placeType: placeType)
-        }
+    private func setupRx() {
+        tableView
+            .rx_itemSelected
+            .subscribeNext { indexPath in
+                let svc = UIStoryboard.searchViewController
+                let placeType = PlaceType.all()[indexPath.row]
+                let c = CLLocationCoordinate2D(latitude: 6.5243793, longitude: 3.3792057)
+                svc.viewModel = SearchViewModel(placeType: placeType, coordinate: c)
+                self.navigationController?.pushViewController(svc, animated: true)
+            }
+            .addDisposableTo(disposeBag)
     }
 
 }
