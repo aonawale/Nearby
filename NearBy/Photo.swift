@@ -8,14 +8,21 @@
 
 import Foundation
 import Mapper
+import UIKit
 
-struct Photo: Mappable {
+enum PhotoState {
+    case New, Downloaded, Failed
+}
+
+final class Photo: Mappable {
     
     let height: Int
     let width: Int
     let reference: String
+    var image: UIImage?
+    var state = PhotoState.New
     
-    init(map: Mapper) throws {
+    required init(map: Mapper) throws {
         try height = map.from("height")
         try width = map.from("width")
         try reference = map.from("photo_reference")

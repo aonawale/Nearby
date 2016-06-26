@@ -20,7 +20,7 @@ struct Place: Mappable {
     let location: CLLocationCoordinate2D
     let types: [String]
     let currentlyOpen: Bool
-    let photos: [Photo]
+    var photos: [Photo]
     
     init(map: Mapper) throws {
         try id = map.from("id")

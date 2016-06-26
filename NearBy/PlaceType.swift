@@ -10,7 +10,6 @@ import Foundation
 
 enum PlaceType: String {
     case Hospital
-    case Airport
     case Laundry
     case ATM
     case Library
@@ -25,14 +24,12 @@ enum PlaceType: String {
     case School
     case ShoppingMall = "Shopping Mall"
     case GasStation = "Gas Station"
-    case GYM
     case BusStation = "Bus Station"
-    case Casino
     
     static func all() -> [PlaceType] {
-        return [.Hospital, .Airport, .Laundry, .ATM, .Library,
+        return [.Hospital, .Laundry, .ATM, .Library,
                 .Bank, .Bar, .BeautySalon, .Lodging, .Cafe,
                 .NightClub, .Park, .Restaurant, .School, .ShoppingMall,
-                .GasStation, .GYM, .BusStation, .Casino]
+                .GasStation, .BusStation]
     }
 }
